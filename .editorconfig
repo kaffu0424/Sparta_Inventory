@@ -3,13 +3,13 @@ root = true
 
 # C# 파일
 [*.cs]
-charset = utf-8
 
 #### 코어 EditorConfig 옵션 ####
 
 # 들여쓰기 및 간격
 indent_size = 4
 indent_style = space
+charset = utf-8
 tab_width = 4
 
 # 새 줄 기본 설정
@@ -256,3 +256,7 @@ dotnet_style_parentheses_in_other_operators = never_if_unnecessary:silent
 dotnet_code_quality_unused_parameters = all:suggestion
 dotnet_style_allow_multiple_blank_lines_experimental = true:silent
 dotnet_style_allow_statement_immediately_after_block_experimental = true:silent
+tab_width = 4
+indent_size = 4
+end_of_line = crlf
+dotnet_style_operator_placement_when_wrapping = beginning_of_line
