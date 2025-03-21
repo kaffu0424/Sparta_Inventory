@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class UIManager : Singleton<UIManager>
 {
-    [SerializeField] private UIMainMenu     mainUI;
-    [SerializeField] private UIStatus       statusUI;
-    [SerializeField] private UIInventory    inventoryUI;
+    private UIMainMenu     mainUI;
+    private UIStatus       statusUI;
+    private UIInventory    inventoryUI;
 
     // get / set
     public UIMainMenu MainUI => mainUI;

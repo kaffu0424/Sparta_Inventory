@@ -20,7 +20,7 @@ public class Character
         name = "Coding Slave";
         gold = 50000;
         level = 1;
-        exp = 2;
+        exp = 0;
         maxExp = 10;
 
         damage = data.damage;
