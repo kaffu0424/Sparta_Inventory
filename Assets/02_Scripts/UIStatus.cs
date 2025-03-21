@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,16 +12,31 @@ public class UIStatus : BaseUI
     [SerializeField] private Button backButton;
     [Header("Data")]
     [SerializeField] private TextMeshProUGUI[] dataText;
-
     public override void InitUI(UIManager manaer)
     {
         base.InitUI(manaer);
         backButton.onClick.AddListener(UIManager.Instance.MainUI.OpenMainMenu);
     }
 
-    public void OnStatus()
+    public void OnStatus(bool active)
     {
-        rootTransform.SetActive(true);
-        // 대충 스탯 출력해주기
+        rootTransform.SetActive(active);
+
+        // Status UI OFF
+        if (!active)
+            return;
+
+        SetData();
+    }
+
+    private void SetData()
+    {
+        // status set
+        Character data = GameManager.Instance.character;
+
+        dataText[(int)StatusType.Damage].text = data.damage.ToString();
+        dataText[(int)StatusType.Defense].text = data.defense.ToString();
+        dataText[(int)StatusType.Hp].text = data.hp.ToString();
+        dataText[(int)StatusType.Critical].text = data.critical.ToString();
     }
 }

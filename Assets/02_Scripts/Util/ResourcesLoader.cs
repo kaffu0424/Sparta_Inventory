@@ -4,13 +4,11 @@ public enum DataType
 {
     NULL,
     Scriptable,
-
-    /* enum °ª ÇÊ¿äÇÏ¸é Ãß°¡ÇØÁÖ¼¼¿ä.
-     * ex )
-     * PrefabÀ» ÀúÀåÇØµĞ Æú´õ¸íÀÌ "Prefab" ÀÏ¶§
-     * DataType¿¡ "Prefab" Ãß°¡ÇØÁÖ¼¼¿ä.
-     * PrefabÀÇ Å¸ÀÔÀº GameObjectÀÔ´Ï´Ù.
-     * Ãß°¡ÇÏÁö¾Ê°í È£ÃâÇÏ¸é GameObject/[ÆÄÀÏ¸í] ÀÇ ÆÄÀÏÀ» Ã£¾Æ¿É´Ï´Ù.
+    Prefab
+    /* enum ê°’ í•„ìš”í•˜ë©´ ì¶”ê°€í•´ì£¼ì„¸ìš”.
+     * ìƒì„±í•˜ê³ ì‹¶ì€ í´ë”ëª…ì„ ì¶”ê°€í•´ì£¼ì„¸ìš”.
+     * DataTypeì„ ë„£ì§€ì•Šê³  DataLoadë¥¼ í˜¸ì¶œí•˜ë©´
+     * ì œë„¤ë¦­íƒ€ì… ì´ë¦„ì˜ í´ë”ì—ì„œ íŒŒì¼ì„ ê°€ì ¸ì˜µë‹ˆë‹¤!
      */
 }
 
@@ -18,8 +16,8 @@ public static class ResourcesLoader
 {
     public static T DataLoad<T>(string fileName, DataType type = DataType.NULL) where T : UnityEngine.Object
     {
-        // DataTypeÀ» ÇÒ´çÇÏÁö¾Ê¾ÒÀ»¶§ : Æú´õ¸í typeof(T).Name
-        // DataTypeÀ» ÇÒ´çÇßÀ»¶§ : Æú´õ¸í DataType.ToString();
+        // DataTypeì„ í• ë‹¹í•˜ì§€ì•Šì•˜ì„ë•Œ : í´ë”ëª… typeof(T).Name
+        // DataTypeì„ í• ë‹¹í–ˆì„ë•Œ : í´ë”ëª… DataType.ToString();
         string folderName = type == DataType.NULL 
             ? $"{typeof(T).Name}" : type.ToString();
 

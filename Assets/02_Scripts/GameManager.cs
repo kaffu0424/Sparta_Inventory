@@ -7,7 +7,7 @@ public class GameManager : Singleton<GameManager>
     private const string dataFile = "DefaultData";
 
     public Character character { get; private set; }
-    public StatusData data;
+    private StatusData data;
     protected override void InitManager()
     {
         data = ResourcesLoader.DataLoad<StatusData>(dataFile, DataType.Scriptable);

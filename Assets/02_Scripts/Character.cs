@@ -7,7 +7,7 @@ public class Character
     public int level { get; private set; }
     public int exp { get; private set; }
     public int maxExp { get; private set; }
-    
+
     // 캐릭터 스탯
     public int damage { get; private set; }
     public int defense { get; private set; }
@@ -16,6 +16,13 @@ public class Character
 
     public Character(StatusData data)
     {
+        job = "코딩노예";
+        name = "Coding Slave";
+        gold = 50000;
+        level = 1;
+        exp = 0;
+        maxExp = 10;
+
         damage = data.damage;
         defense = data.defense;
         hp = data.hp;

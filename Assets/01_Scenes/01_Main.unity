@@ -2451,7 +2451,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rootTransform: {fileID: 700529362}
   backButton: {fileID: 1566938182}
-  dataText: []
+  dataText:
+  - {fileID: 356162059}
+  - {fileID: 1599342928}
+  - {fileID: 1762198397}
+  - {fileID: 823641688}
 --- !u!1 &820998911
 GameObject:
   m_ObjectHideFlags: 0
