@@ -4,7 +4,14 @@ public enum DataType
 {
     NULL,
     Scriptable,
-    GameObject,     // prefab
+
+    /* enum 값 필요하면 추가해주세요.
+     * ex )
+     * Prefab을 저장해둔 폴더명이 "Prefab" 일때
+     * DataType에 "Prefab" 추가해주세요.
+     * Prefab의 타입은 GameObject입니다.
+     * 추가하지않고 호출하면 GameObject/[파일명] 의 파일을 찾아옵니다.
+     */
 }
 
 public static class ResourcesLoader
