@@ -18,7 +18,7 @@ public class UIMainMenu : BaseUI
 
     public void OpenMainMenu()
     {
-        UIManager.Instance.StatusUI.RootTransform.SetActive(false);
+        UIManager.Instance.StatusUI.OnStatus();
         UIManager.Instance.InventoryUI.RootTransform.SetActive(false);
     }
     public void OpenStatus()

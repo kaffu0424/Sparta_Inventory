@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class UnityUtility
+public static class UnityExtensionMethod
 {
     /// <summary>
     /// Transform.gameObject 하기싫어서 만든 확장메서드
