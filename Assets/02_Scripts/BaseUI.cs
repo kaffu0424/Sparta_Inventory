@@ -5,6 +5,9 @@ using UnityEngine;
 public class BaseUI : MonoBehaviour
 {
     protected UIManager manager;
+    [SerializeField] protected Transform rootTransform;
+
+    public Transform RootTransform => rootTransform;
 
     public virtual void InitUI(UIManager manaer)
     {

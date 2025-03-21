@@ -18,6 +18,15 @@ public class UIMainMenu : BaseUI
 
     public void OpenMainMenu()
     {
-
+        UIManager.Instance.StatusUI.RootTransform.SetActive(false);
+        UIManager.Instance.InventoryUI.RootTransform.SetActive(false);
+    }
+    public void OpenStatus()
+    {
+        UIManager.Instance.StatusUI.RootTransform.SetActive(true);
+    }
+    public void OpenInventory()
+    {
+        UIManager.Instance.InventoryUI.RootTransform.SetActive(true);
     }
 }
