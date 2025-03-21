@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 153498181}
   - component: {fileID: 153498180}
   m_Layer: 5
-  m_Name: Lv
+  m_Name: Lv text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1475,7 +1475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d948021ec0593f94387d791b6590f13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
 --- !u!1 &561423144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,7 +1487,7 @@ GameObject:
   - component: {fileID: 561423147}
   - component: {fileID: 561423146}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: job text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1944,7 +1943,7 @@ GameObject:
   - component: {fileID: 719355085}
   - component: {fileID: 719355084}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: name text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2078,7 +2077,7 @@ GameObject:
   - component: {fileID: 765049206}
   - component: {fileID: 765049205}
   m_Layer: 5
-  m_Name: expTEXT
+  m_Name: exp text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4703,7 +4702,7 @@ GameObject:
   - component: {fileID: 1687860438}
   - component: {fileID: 1687860437}
   m_Layer: 5
-  m_Name: gold TEXT
+  m_Name: gold text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5236,6 +5235,13 @@ MonoBehaviour:
   rootTransform: {fileID: 487726733}
   statusButton: {fileID: 838177815}
   inventoryButton: {fileID: 321525517}
+  dataText:
+  - {fileID: 561423146}
+  - {fileID: 719355084}
+  - {fileID: 1687860437}
+  - {fileID: 153498180}
+  - {fileID: 765049205}
+  expFill: {fileID: 1069988608}
 --- !u!1 &1806676353
 GameObject:
   m_ObjectHideFlags: 0

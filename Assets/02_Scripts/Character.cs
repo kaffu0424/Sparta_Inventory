@@ -1,6 +1,6 @@
 public class Character
 {
-    // Ä³¸¯ÅÍ Á¤º¸
+    // ìºë¦­í„° ì •ë³´
     public string job { get; private set; }
     public string name { get; private set; }
     public int gold { get; private set; }
@@ -8,7 +8,7 @@ public class Character
     public int exp { get; private set; }
     public int maxExp { get; private set; }
 
-    // Ä³¸¯ÅÍ ½ºÅÈ
+    // ìºë¦­í„° ìŠ¤íƒ¯
     public int damage { get; private set; }
     public int defense { get; private set; }
     public int hp { get; private set; }
@@ -16,11 +16,11 @@ public class Character
 
     public Character(StatusData data)
     {
-        job = "ÄÚµù³ë¿¹";
+        job = "ì½”ë”©ë…¸ì˜ˆ";
         name = "Coding Slave";
         gold = 50000;
         level = 1;
-        exp = 0;
+        exp = 2;
         maxExp = 10;
 
         damage = data.damage;

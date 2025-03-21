@@ -5,3 +5,12 @@ public enum StatusType
     Hp,
     Critical
 }
+
+public enum PlayerInfoType
+{
+    Job,
+    Name,
+    Gold,
+    Level,
+    Exp,
+}

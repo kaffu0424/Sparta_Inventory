@@ -10,7 +10,8 @@ public class UIStatus : BaseUI
 {
     [Header("Button")]
     [SerializeField] private Button backButton;
-    [Header("Data")]
+
+    [Header("Data UI")]
     [SerializeField] private TextMeshProUGUI[] dataText;
     public override void InitUI(UIManager manaer)
     {

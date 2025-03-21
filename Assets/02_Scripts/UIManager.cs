@@ -14,13 +14,17 @@ public class UIManager : Singleton<UIManager>
     public UIInventory InventoryUI => inventoryUI;
     protected override void InitManager()
     {
-        // ĳ��
+        // 캐싱
         mainUI = FindFirstObjectByType<UIMainMenu>();
         statusUI = FindFirstObjectByType<UIStatus>();
         inventoryUI = FindFirstObjectByType<UIInventory>();
 
+        // 초기화
         mainUI?.InitUI(this);
         statusUI?.InitUI(this);
         inventoryUI?.InitUI(this);
+
+        // 초기설정?
+        mainUI?.OpenMainMenu();
     }
 }
