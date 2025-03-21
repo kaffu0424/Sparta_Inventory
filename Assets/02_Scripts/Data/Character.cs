@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 public class Character
 {
     // 캐릭터 정보
@@ -14,8 +17,12 @@ public class Character
     public int hp { get; private set; }
     public int critical { get; private set; }
 
+    public List<Item> inventory { get; private set; }
+    public Action inventoryUpdate;
+
     public Character(StatusData data)
     {
+        // information
         job = "코딩노예";
         name = "Coding Slave";
         gold = 50000;
@@ -23,9 +30,28 @@ public class Character
         exp = 0;
         maxExp = 10;
 
+        // status
         damage = data.damage;
         defense = data.defense;
         hp = data.hp;
         critical = data.critical;
+
+        // inventory
+        inventory = new List<Item>();
+    }
+
+    public void AddItem()
+    {
+
+    }
+
+    public void Equip()
+    {
+
+    }
+
+    public void UnEquip()
+    {
+
     }
 }

@@ -12,5 +12,12 @@ public class GameManager : Singleton<GameManager>
     {
         data = ResourcesLoader.DataLoad<StatusData>(dataFile, DataType.Scriptable);
         character = new Character(data);
+
+        SetData();
+    }
+
+    private void SetData()
+    {
+        
     }
 }
