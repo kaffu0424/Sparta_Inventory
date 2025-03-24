@@ -30,5 +30,9 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
         // 아이템 착용 표시
         equipImage.SetActive(item.isEquip);
+
+        // 스탯 업데이트
+        GameManager.Instance.character.StatusUpdate(item, item.isEquip);
     }
 }
+ 

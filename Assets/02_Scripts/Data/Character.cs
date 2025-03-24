@@ -45,13 +45,24 @@ public class Character
         inventory.Add(item);
     }
 
-    public void Equip()
+    public void StatusUpdate(Item item, bool isEquip)
     {
+        int offset = isEquip ? 1 : -1;
 
-    }
-
-    public void UnEquip()
-    {
-
+        switch(item.data.statusType)
+        {
+            case StatusType.Damage:
+                damage += item.data.value * offset;
+                break;
+            case StatusType.Defense:
+                defense += item.data.value * offset;
+                break;
+            case StatusType.Hp:
+                hp += item.data.value * offset;
+                break;
+            case StatusType.Critical:
+                critical += item.data.value * offset;
+                break;
+        }
     }
 }

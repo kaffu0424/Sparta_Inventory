@@ -13,6 +13,7 @@ public class UIStatus : BaseUI
 
     [Header("Data UI")]
     [SerializeField] private TextMeshProUGUI[] dataText;
+
     public override void InitUI(UIManager manaer)
     {
         base.InitUI(manaer);
