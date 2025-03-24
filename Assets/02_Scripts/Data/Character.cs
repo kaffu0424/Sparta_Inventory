@@ -43,7 +43,6 @@ public class Character
     public void AddItem(Item item)
     {
         inventory.Add(item);
-        item.isEquip = true;
     }
 
     public void Equip()
