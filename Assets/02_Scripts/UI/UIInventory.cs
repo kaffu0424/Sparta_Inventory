@@ -13,7 +13,7 @@ public class UIInventory : BaseUI
     [Header("Inventory UI")]
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] private Transform inventoryView;
-    [SerializeField] private ItemSlot[] slots;
+    [SerializeField] private List<ItemSlot> slots;
 
     public override void InitUI(UIManager manaer)
     {
@@ -23,10 +23,11 @@ public class UIInventory : BaseUI
         character = GameManager.Instance.character;
         character.inventoryUpdate = RefreshInventory;
 
-        slots = new ItemSlot[20];
-        for(int i = 0; i < slots.Length; i++)
+        slots = new List<ItemSlot>();
+        for(int i = 0; i < 20; i++)
         {
-            Instantiate(slotPrefab, inventoryView);
+            ItemSlot slot = Instantiate(slotPrefab, inventoryView).GetComponent<ItemSlot>();
+            slots.Add(slot);
         }
     }
 
@@ -41,9 +42,9 @@ public class UIInventory : BaseUI
 
     public void RefreshInventory()
     {
-        for (int i = 0; i < slots.Length; i++)
+        for (int i = 0; i < character.inventory.Count; i++)
         {
-
+            slots[i].SlotUpdate(character.inventory[i]);
         }
     }
 }
